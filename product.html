@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-mart</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar-main">
+        <div>
+            <h1>E-mart</h1>
+        </div>
+
+        <div class="navbar-middle" style="align-items: center;">
+            <input type="search" style="width: 80%;" placeholder="Search Product"><i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="navbar-right">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!--Phone menu bar-->
+        <div class="phone-menu" onclick="showPhoneMenu()">
+            <i class="fa-solid fa-bars" style="padding-right:10px; font-size: x-large;"></i>
+        </div>
+    </nav>
+    <!--Phone menu bar-->
+    <div class="phone-background">
+        <div class="phone-menu-list">
+            <p onclick="closePhoneMenu()">
+
+                <i class="fa-regular fa-circle-xmark" style="float: right; font-size: x-large; padding: 10px;"></i>
+            </p>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Search-->
+    <br>
+    <div class="search-product">
+        <form class="search-bar-product">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="search-bar-input"placeholder="Search Product">
+        </form>
+
+    </div>
+
+    <!--Cart Item-->
+    <div class="cart-area">
+
+        <div class="cart-icon" onclick="showCart()">
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+
+        <div class="cart-item">
+
+            <i class="fa-solid fa-xmark" onclick="closeCart()" id="i"></i>
+            <h2>Cart Item</h2>
+            
+
+            
+
+
+
+        </div>
+        
+    </div>
+
+    <!--Products-->
+    <br>
+    <br>
+    <h2>Products</h2>
+
+    <div class="product-display">
+
+        <div class="product-display-div">
+            <img src="ps1.jpeg" class="product-display-img">
+            <h4>iphone 15 Phone</h4>
+            <h5>85,000</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps2.jpg" class="product-display-img">
+            <h4>Samsung s24 ultra Phone</h4>
+            <h5>80,000</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps3.jpg" class="product-display-img">
+            <h4>Moto edge 50 fusion Phone</h4>
+            <h5>35,000</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps4.jpeg" class="product-display-img">
+            <h4>iQoo neo 7 pro Phone</h4>
+            <h5>30,000</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps5.jpeg" class="product-display-img">
+            <h4>ASUS tuf laptop</h4>
+            <h5>58,000</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps6.jpg" class="product-display-img">
+            <h4>Macbook Laptop</h4>
+            <h5>90,000</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps7.jpg" class="product-display-img">
+            <h4>hp Laptop</h4>
+            <h5>52,000</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps8.webp" class="product-display-img">
+            <h4>Dell Laptop</h4>
+            <h5>53,000</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps9.webp" class="product-display-img">
+            <h4>Headphone Boat</h4>
+            <h5>1,200</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps10.webp" class="product-display-img">
+            <h4>Speaker Boat</h4>
+            <h5>1,500</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps11.jpeg" class="product-display-img">
+            <h4>AirConditioner AC</h4>
+            <h5>8,000</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps12.webp" class="product-display-img">
+            <h4>Air Cooler</h4>
+            <h5>6,000</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps13.webp" class="product-display-img">
+            <h4>Fridge</h4>
+            <h5>12,000</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps14.png" class="product-display-img">
+            <h4>Washing Machine</h4>
+            <h5>10,000</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps15.webp" class="product-display-img">
+            <h4>PlayStation ps5</h4>
+            <h5>48,000</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps16.jpg" class="product-display-img">
+            <h4>Xbox SeriesX</h4>
+            <h5>38,000</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps17.jpg" class="product-display-img">
+            <h4>Nintendo Switch</h4>
+            <h5>25,000</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps18.jpg" class="product-display-img">
+            <h4>Mouse RGB</h4>
+            <h5>950</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps19.webp" class="product-display-img">
+            <h4>Keyboard RGB</h4>
+            <h5>1,000</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps20.webp" class="product-display-img">
+            <h4>Rolex Watch</h4>
+            <h5>100,000</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+        <div class="product-display-div">
+            <img src="ps21.jpg" class="product-display-img">
+            <h4>Realme buds t300 </h4>
+            <h5>2,300</h5>
+            <p onclick="addToCart(event)"><strong>Add to Cart</strong><i class="fa-solid fa-cart-shopping"></i></p>
+        </div>
+    </div>
+
+    
+
+    <br>
+    <!--FOotbar-->
+    <div class="footbar">
+        <div class="fooContent">
+            <div class="foo-left">
+                <h1>E-mart</h1>
+                <table>
+                    <tr>
+                        <td>Electronics</td>
+                        <td>Diary</td>
+                        <td>Clothes</td>
+                        <td>Decorators</td>
+                    </tr>
+                    <tr>
+                        <td>Fassion</td>
+                        <td>Kitchen</td>
+                        <td>Device</td>
+                        <td>Auto parts</td>
+                    </tr>
+                </table>
+
+                <br>
+                <i class="fa-brands fa-facebook"></i><i class="fa-brands fa-instagram"></i><i
+                    class="fa-brands fa-twitter"></i><i class="fa-brands fa-linkedin"></i><i
+                    class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="foo-right">
+                <p>Get the latest news!</p>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="email" placeholder="E-mail...">
+                        </td>
+                        <td>
+                            <button type="submit">Subscribe</button>
+                        </td>
+                    </tr>
+                </table>
+                <div style="display: flex;">
+                    <input type="checkbox">
+                    <p>By clicking, you agree that you are atleast 16 years of age</p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <hr>
+        <br>
+        <br>
+        <center>
+            <p>Website Terms | Private Policy | Accessibility Statement | CA Transparency in supply Chain Act | Supply
+                Code of Conduct | Marketing to Children | Do not Sell My Information</p>
+        </center>
+    </div>
+
+
+    <script src="home.js"></script>
+    <script src="product.js"></script>
+</body>
+
+</html>

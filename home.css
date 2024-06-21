@@ -1,0 +1,261 @@
+* {
+    margin: 1px;
+    padding: 0;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    background: rgb(217, 212, 210);
+    background: linear-gradient(90deg, rgba(217, 212, 210, 1) 0%, rgba(253, 253, 255, 1) 84%);
+}
+
+/*Navbar*/
+.navbar-main {
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    height: 60px;
+
+}
+
+.navbar-main div:nth-of-type(1) {
+    flex-grow: 1;
+}
+
+.navbar-main div:nth-of-type(2) {
+    flex-grow: 3;
+}
+
+.navbar-main div:nth-of-type(3) {
+    flex-grow: 1;
+}
+
+/*Input Search*/
+.navbar-middle input {
+    height: 40px;
+    border-radius: 30px;
+    padding-left: 15px;
+    font-size: medium;
+    border-color: wheat;
+
+}
+
+.navbar-right ul {
+    list-style-type: none;
+    float: right;
+    padding-right: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-right a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+.phone-menu {
+    display: none;
+}
+
+.phone-background {
+    display: none;
+}
+
+
+/*FootBar Contact*/
+.footbar {
+    background-color: rgb(70, 69, 69);
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+}
+
+.foo-left td {
+    padding: 3px;
+}
+
+.foo-left i {
+    padding: 4px;
+}
+
+.fooContent {
+    color: rgb(241, 238, 238);
+    display: flex;
+}
+
+.fooContent div:nth-of-type(1) {
+    flex-grow: 2;
+}
+
+.fooContent div:nth-of-type(2) {
+    flex-grow: 1;
+}
+
+.foo-right {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 50px;
+}
+
+.foo-right button {
+    background-color: rgb(70, 69, 69);
+    font-size: 100%;
+    cursor: pointer;
+    border: 0cap;
+    color: rgb(208, 201, 201);
+}
+
+.foo-right button:hover {
+    color: red;
+}
+
+.foo-right input {
+    background-color: rgb(70, 69, 69);
+    border-color: rgb(162, 159, 159);
+    font-size: 100%;
+}
+
+
+/* Shopping Top*/
+.shop-head img {
+    border-radius: 20px;
+    width: 60%;
+}
+
+.shop-head-button {
+    position: absolute;
+    top: 30%;
+    left: 12%;
+}
+
+.shop-head button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.shop-head button:hover {
+    background-color: rgb(206, 208, 209);
+    padding: 15px;
+}
+
+/*Most Searched*/
+
+.Most-searched{
+display: flex;
+overflow-x: auto;
+overflow-y: hidden;
+}
+.Most-searched img{
+    width: 200px;
+    height: 200px;
+}
+
+.Most-searched a{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-size: medium;
+    padding: 10px;
+    border-radius: 10px;  
+}
+.Most-searched a:hover{
+    padding: 15px;
+    background-color: rgb(213, 224, 156);
+}
+
+/*Youtube Video*/
+.iframe-video{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Media Query*/
+
+@media screen and (max-width:700px) {
+    .navbar-right {
+        display: none;
+    }
+
+    .phone-menu {
+        display: block;
+    }
+
+    .phone-background {
+        display: block;
+    }
+
+    .phone-background {
+        position: fixed;
+        left: -100%;
+        transition: 2s;
+        z-index: 3;
+    }
+
+    .phone-menu-list {
+        background-color: darkgray;
+        width: 50%;
+        height: 100%;
+        position: fixed;
+    }
+
+    .phone-menu-list ul {
+        list-style-type: none;
+        margin-left: 10px;
+    }
+
+    .phone-menu-list li {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .phone-menu-list a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .phone-menu-list li:hover {
+        background-color: rgb(187, 179, 179);
+    }
+
+    .fooContent {
+        display: block;
+    }
+
+
+    /* Shopping Top*/
+    .shop-head{
+        z-index: 0;
+    }
+    .shop-head img:nth-of-type(2) {
+        display: none;
+    }
+
+    .shop-head img {
+        width: 100%;
+    }
+
+    .shop-head-button {
+        top: 20%;
+        left: 12%;
+    }
+
+    /*Youtube*/
+    .iframe-video{
+        display: block;
+    }
+
+}
